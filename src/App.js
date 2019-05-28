@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 
 /*
@@ -79,6 +79,10 @@ const App = () => {
     newTodos.splice(index, 1);
     setTodos(newTodos);
   };
+
+  useEffect(() => {
+    document.title = `You have ${todos.length} todos`;
+  });
 
   return (
     <div className="app">
