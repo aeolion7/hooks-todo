@@ -80,6 +80,12 @@ const App = () => {
     setTodos(newTodos);
   };
 
+  /*
+    The useEffect hook can be thought of as
+    componentDidMount(), componentDidUpdate(),
+    and componentWillUnmount() combined.
+  */
+
   useEffect(() => {
     document.title = `You have ${todos.length} todos`;
   });
